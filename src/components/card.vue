@@ -4,9 +4,11 @@
       <img :src="picture_src" class="card-img-top" :alt="cardTitle" />
       <div class="card-body">
         <h5 class="card-title">{{ cardTitle }}</h5>
-        <p class="card-text">
-          {{ cardBody }}
-        </p>
+        <div class="card-text-container">
+          <p class="card-text">
+            {{ cardBody }}
+          </p>
+        </div>
       </div>
     </div>
   </div>
@@ -44,19 +46,23 @@ export default {
   background-color: rgba(233, 138, 21, 0.5);
 }
 .card .card-title {
-  font-size: 25px;
-  line-height: 33px;
+  font-size: 20px;
+  line-height: 27px;
+  font-weight: bold;
+}
+.card .card-text-container {
+  height: 60px;
+  overflow: hidden;
 }
 .card .card-text {
   font-size: 14px;
-  line-height: 18px;
-  height: 110px;
+  line-height: 15px;
+  height: 100px;
   display: -webkit-box;
   overflow: hidden;
-  -webkit-line-clamp: 6;
+  -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
 }
-
 @media (min-width: 400px) {
   .card {
     width: 18rem;
